@@ -52,6 +52,7 @@ public class AppCommands
         app.MapGet("/", () => {
             var sb = new StringBuilder();
             sb.AppendLine($"StreamerKit: {this.GetAppVersion()}");
+            sb.AppendLine("https://github.com/drasticactions/streamer-kit");
             sb.AppendLine("To add a new directory, add a new folder to the data directory. Then restart the application.");
             sb.AppendLine("Available Directories:");
             foreach (var handler in this.handlers)
